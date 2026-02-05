@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagh Consultance | All Insurance Under One Roof | Get Free Quotes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "Anagh Consultance",
+      "description": "Get all types of insurance under one roof. Compare quotes from 20+ insurance companies and save up to 40% on premiums.",
+      "url": "https://anaghconsultance.com",
+      "telephone": "+919137426363",
+      "email": "kunalsabale89@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "openingHours": "Mo-Su 09:00-21:00",
+      "serviceType": ["Health Insurance", "Motor Insurance", "Life Insurance", "General Insurance", "Property Insurance"]
+    }
+    </script>
+    
+    <style>
+        /* ===== BASE STYLES ===== */
+        :root {
+            --primary-blue: #1E3A8A;
+            --accent-teal: #0D9488;
+            --accent-orange: #EA580C;
+            --dark-gray: #1F2937;
+            --light-gray: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --success-green: #10B981;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--light-gray);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background-color: #C2410C;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .btn-success {
+            background-color: var(--success-green);
+        }
+        
+        .btn-call {
+            background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-teal);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary-blue);
+        }
+        
+        .logo span {
+            color: var(--accent-teal);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-teal);
+        }
+        
+        .contact-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-header a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2D4F9C 100%);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        /* ===== INSURANCE GRID ===== */
+        .insurance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .insurance-category {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .insurance-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #E0F2FE;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .category-icon i {
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+        
+        .category-header h3 {
+            font-size: 22px;
+            color: var(--dark-gray);
+        }
+        
+        .company-list {
+            list-style: none;
+        }
+        
+        .company-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .company-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .company-list li i {
+            color: var(--accent-teal);
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        /* ===== TALLY FORM SECTION ===== */
+        .tally-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+        }
+        
+        .stats-banner {
+            background: var(--primary-blue);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .stat-item p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .tally-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+            min-height: 400px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .badge-item {
+            text-align: center;
+        }
+        
+        .badge-item i {
+            color: var(--accent-teal);
+            font-size: 24px;
+        }
+        
+        .badge-item p {
+            margin: 10px 0 0 0;
+            color: var(--text-light);
+        }
+        
+        .direct-contact {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .direct-contact h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .floating-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .floating-call {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 999;
+            background-color: var(--accent-teal);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .floating-call:hover {
+            background-color: #0F766E;
+            transform: scale(1.1);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-teal);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #D1D5DB;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9CA3AF;
+            font-size: 14px;
+        }
+        
+        /* ===== LOADING PLACEHOLDER ===== */
+        #formLoading {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .insurance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .contact-header {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #f0f0f0;
+            }
+            
+            .contact-header.active {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .insurance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            /* Adjust floating buttons for mobile */
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .floating-call {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                bottom: 75px;
+                right: 15px;
+            }
+            
+            /* Improve Tally form on mobile */
+            #tallyIframe {
+                min-height: 800px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 30px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .tally-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== URGENCY BANNER ===== -->
+    <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); padding: 15px 0; text-align: center;">
+        <div class="container">
+            <p style="color: #92400E; font-weight: 600; margin: 0;">
+                <i class="fas fa-clock" style="margin-right: 8px;"></i>
+                LIMITED TIME OFFER: Get additional 5% discount on first-year premium!
+                <span style="background: #DC2626; color: white; padding: 3px 8px; border-radius: 4px; margin-left: 10px; font-size: 14px;">
+                    Offer ends soon
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>ANAGH<span>CONSULTANCE</span></h1>
+                </div>
+                
+                <div class="contact-header" id="contactHeader">
+                    <a href="tel:9137426363"><i class="fas fa-phone"></i> 9137426363</a>
+                    <a href="mailto:kunalsabale89@gmail.com"><i class="fas fa-envelope"></i> kunalsabale89@gmail.com</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#insurance">Insurance Partners</a></li>
+                    <li><a href="#quotes">Get Quotes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://wa.me/919137426363" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>ALL TYPES OF INSURANCE UNDER ONE ROOF</h1>
+            <p>Get FREE quotes from 20+ insurance companies. Compare and save up to 40% on your insurance premiums.</p>
+            <div class="hero-btns">
+                <a href="#quotes" class="btn">
+                    <i class="fas fa-bolt"></i> GET INSTANT QUOTES
+                </a>
+                <a href="tel:9137426363" class="btn btn-call">
+                    <i class="fas fa-phone-alt"></i> CALL NOW: 9137426363
+                </a>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <i class="fas fa-shield-alt" style="color: #10B981; font-size: 20px;"></i>
+                    <p style="margin-top: 5px; font-size: 14px; color: rgba(255,255,255,0.9);">Secure & Trusted</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-rupee-sign" style="color: #10B981; font-size: 20px;"></i>
+                    <p style="margin-top: 5px; font-size: 14px; color: rgba(255,255,255,0.9);">Best Price Guarantee</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-headset" style="color: #10B981; font-size: 20px;"></i>
+                    <p style="margin-top: 5px; font-size: 14px; color: rgba(255,255,255,0.9);">24/7 Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSURANCE PARTNERS SECTION ===== -->
+    <section id="insurance">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Insurance Partners</h2>
+                <p>We work with all leading insurance companies to provide you with the best options</p>
+            </div>
+            
+            <div class="insurance-grid">
+                <!-- Health Insurance -->
+                <div class="insurance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>HEALTH INSURANCE</h3>
+                    </div>
+                    <ul class="company-list">
+                        <li><i class="fas fa-check"></i> Care Health</li>
+                        <li><i class="fas fa-check"></i> Tata AIG</li>
+                        <li><i class="fas fa-check"></i> HDFC Ergo</li>
+                        <li><i class="fas fa-check"></i> Bajaj Health</li>
+                        <li><i class="fas fa-check"></i> ICICI Lombard</li>
+                        <li><i class="fas fa-check"></i> Aditya Birla</li>
+                        <li><i class="fas fa-check"></i> Niva Bupa</li>
+                        <li><i class="fas fa-check"></i> Star Health</li>
+                        <li><i class="fas fa-check"></i> Manipal Cigna</li>
+                    </ul>
+                </div>
+                
+                <!-- Motor Insurance -->
+                <div class="insurance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>MOTOR INSURANCE</h3>
+                    </div>
+                    <ul class="company-list">
+                        <li><i class="fas fa-check"></i> Tata Motor</li>
+                        <li><i class="fas fa-check"></i> ICICI Lombard</li>
+                        <li><i class="fas fa-check"></i> Go Digit</li>
+                        <li><i class="fas fa-check"></i> Iffco Tokio</li>
+                        <li><i class="fas fa-check"></i> Magma</li>
+                        <li><i class="fas fa-check"></i> Reliance</li>
+                        <li><i class="fas fa-check"></i> Bajaj</li>
+                    </ul>
+                </div>
+                
+                <!-- Life Insurance -->
+                <div class="insurance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>LIFE INSURANCE</h3>
+                    </div>
+                    <ul class="company-list">
+                        <li><i class="fas fa-check"></i> Kotak Life</li>
+                        <li><i class="fas fa-check"></i> Tata AIA</li>
+                        <li><i class="fas fa-check"></i> HDFC Life</li>
+                        <li><i class="fas fa-check"></i> ICICI Prudential</li>
+                        <li><i class="fas fa-check"></i> Go Digit Life</li>
+                        <li><i class="fas fa-check"></i> Axis Max Life</li>
+                    </ul>
+                </div>
+                
+                <!-- General Insurance -->
+                <div class="insurance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>GENERAL INSURANCE</h3>
+                    </div>
+                    <ul class="company-list">
+                        <li><i class="fas fa-check"></i> Future Generali</li>
+                        <li><i class="fas fa-check"></i> Bajaj General</li>
+                        <li><i class="fas fa-check"></i> HDFC General</li>
+                        <li><i class="fas fa-check"></i> Reliance General</li>
+                        <li><i class="fas fa-check"></i> Shriram General</li>
+                    </ul>
+                </div>
+                
+                <!-- Property Insurance -->
+                <div class="insurance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>PROPERTY INSURANCE</h3>
+                    </div>
+                    <ul class="company-list">
+                        <li><i class="fas fa-check"></i> Travel Insurance</li>
+                        <li><i class="fas fa-check"></i> Marine Insurance</li>
+                        <li><i class="fas fa-check"></i> Workman Compensation</li>
+                        <li><i class="fas fa-check"></i> Fire Insurance</li>
+                        <li><i class="fas fa-check"></i> Professional Indemnity</li>
+                        <li><i class="fas fa-check"></i> Cyber Security</li>
+                        <li><i class="fas fa-check"></i> Domestic Travel</li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Contact Card -->
+                <div class="insurance-category" style="background: linear-gradient(135deg, var(--accent-teal) 0%, #0D9488 100%); color: white;">
+                    <div class="category-header">
+                        <div class="category-icon" style="background-color: rgba(255,255,255,0.2);">
+                            <i class="fas fa-headset" style="color: white;"></i>
+                        </div>
+                        <h3 style="color: white;">NEED HELP?</h3>
+                    </div>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">Talk to our insurance expert directly</p>
+                    <div style="margin-top: 30px;">
+                        <a href="tel:9137426363" class="btn" style="background: white; color: var(--accent-teal); margin-bottom: 10px; width: 100%;">
+                            <i class="fas fa-phone"></i> CALL NOW
+                        </a>
+                        <a href="https://wa.me/919137426363" class="btn btn-whatsapp" style="width: 100%;">
+                            <i class="fab fa-whatsapp"></i> WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OPTIMIZED TALLY FORM SECTION ===== -->
+    <section class="tally-section" id="quotes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get Free Insurance Quotes</h2>
+                <p>Compare prices from 20+ companies in 30 minutes</p>
+            </div>
+            
+            <!-- Stats Banner -->
+            <div class="stats-banner">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Insurance Companies</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>40%</h3>
+                        <p>Average Savings</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>30 min</h3>
+                        <p>Response Time</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tally Form Container -->
+            <div class="tally-container">
+                <!-- Loading placeholder -->
+                <div id="formLoading">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 40px; color: var(--accent-teal);"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Loading Quote Form...</h3>
+                    <p style="color: var(--text-light);">Please wait while we load the form</p>
+                </div>
+                
+                <!-- Your Tally Form Embed -->
+                <iframe 
+                    id="tallyIframe"
+                    src="https://tally.so/embed/PdOQ2d?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    width="100%" 
+                    height="0"
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    title="Anagh Consultance - Insurance Quotes"
+                    style="display: block; border-radius: 8px;"
+                    loading="lazy">
+                </iframe>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge-item">
+                        <i class="fas fa-lock"></i>
+                        <p>100% Secure</p>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>No Spam Calls</p>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-rupee-sign"></i>
+                        <p>No Hidden Fees</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alternative Contact -->
+            <div class="direct-contact">
+                <h3>Prefer to talk directly?</h3>
+                <div class="hero-btns">
+                    <a href="tel:9137426363" class="btn btn-call">
+                        <i class="fas fa-phone"></i> Call: 9137426363
+                    </a>
+                    <a href="https://wa.me/919137426363" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Anagh Consultance</h3>
+                    <p>Your trusted partner for all insurance needs. We connect you with the best insurance providers for comprehensive coverage at competitive prices.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#insurance">Insurance Partners</a></li>
+                        <li><a href="#quotes">Get Quotes</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Insurance Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#insurance">Health Insurance</a></li>
+                        <li><a href="#insurance">Motor Insurance</a></li>
+                        <li><a href="#insurance">Life Insurance</a></li>
+                        <li><a href="#insurance">General Insurance</a></li>
+                        <li><a href="#insurance">Property Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 9137426363</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> kunalsabale89@gmail.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Sun: 9 AM - 9 PM</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Available Across India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Anagh Consultance. All rights reserved. | Phone: 9137426363 | Email: kunalsabale89@gmail.com</p>
+                <p style="margin-top: 10px;">Leads are sent directly to our email and Tally dashboard</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <a href="https://wa.me/919137426363" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:9137426363" class="floating-call">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            const contactHeader = document.getElementById('contactHeader');
+            
+            // Toggle nav menu
+            navLinks.classList.toggle('active');
+            
+            // Also show contact header on mobile
+            if (window.innerWidth <= 768) {
+                contactHeader.classList.toggle('active');
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+                document.getElementById('contactHeader').classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const contactHeader = document.getElementById('contactHeader');
+            
+            if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                if (window.innerWidth <= 768) {
+                    contactHeader.classList.remove('active');
+                }
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+        
+        // Optimize Tally Form Loading
+        window.addEventListener('load', function() {
+            const tallyIframe = document.getElementById('tallyIframe');
+            const formLoading = document.getElementById('formLoading');
+            
+            // Set iframe height after page load
+            setTimeout(function() {
+                if (tallyIframe) {
+                    tallyIframe.style.height = '650px';
+                    if (formLoading) {
+                        formLoading.style.display = 'none';
+                    }
+                }
+            }, 1000);
+            
+            // Adjust height on resize
+            window.addEventListener('resize', function() {
+                if (tallyIframe) {
+                    tallyIframe.style.height = window.innerWidth < 768 ? '800px' : '650px';
+                }
+            });
+        });
+        
+        // Console log for debugging
+        console.log("Anagh Consultance Website Loaded Successfully!");
+        console.log("Tally Form ID: PdOQ2d");
+        console.log("Leads go to: kunalsabale89@gmail.com");
+        console.log("Contact: 9137426363");
+    </script>
+</body>
+</html>
