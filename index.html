@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anagh Consultance | All Insurance Under One Roof | Get Free Quotes</title>
+    
+    <!-- ========== SEO META TAGS ========== -->
+    <title>Anagh Consultance | Insurance Consultant Mumbai | Health, Motor, Life Insurance Quotes</title>
+    <meta name="description" content="Get all insurance under one roof - Health, Motor, Life, Property Insurance. Compare quotes from 20+ companies. Save 40% on premiums. Call: 9137426363">
+    <meta name="keywords" content="insurance consultant, health insurance, motor insurance, life insurance, car insurance, bike insurance, travel insurance, home insurance, insurance quotes, insurance Mumbai, insurance Pune, insurance India, insurance broker">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Anagh Consultance - All Insurance Under One Roof">
+    <meta property="og:description" content="Compare insurance quotes from 20+ companies. Save up to 40%. Free consultation. Call 9137426363">
+    <meta property="og:image" content="https://img.icons8.com/color/480/000000/insurance.png">
+    <meta property="og:url" content="https://kunalsabale89-dotcom.github.io/anagh-consultance/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anagh Consultance - Insurance Consultant">
+    <meta name="twitter:description" content="Get best insurance quotes. Health, Motor, Life Insurance. Call 9137426363">
+    <meta name="twitter:image" content="https://img.icons8.com/color/480/000000/insurance.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kunalsabale89-dotcom.github.io/anagh-consultance/">
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Mumbai">
+    <meta name="geo.position" content="19.0760;72.8777">
+    <meta name="ICBM" content="19.0760, 72.8777">
+    
+    <!-- Business Information -->
+    <meta name="author" content="Anagh Consultance">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- JSON-LD Schema for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "InsuranceAgency",
-      "name": "Anagh Consultance",
-      "description": "Get all types of insurance under one roof. Compare quotes from 20+ insurance companies and save up to 40% on premiums.",
-      "url": "https://anaghconsultance.com",
-      "telephone": "+919137426363",
-      "email": "kunalsabale89@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      },
-      "openingHours": "Mo-Su 09:00-21:00",
-      "serviceType": ["Health Insurance", "Motor Insurance", "Life Insurance", "General Insurance", "Property Insurance"]
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/insurance.png" type="image/x-icon">
     
     <style>
         /* ===== BASE STYLES ===== */
@@ -969,6 +987,37 @@
         <i class="fas fa-phone"></i>
     </a>
 
+    <!-- ===== GOOGLE STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Anagh Consultance",
+        "description": "Insurance consultant providing health, motor, life, and property insurance services. Compare quotes from 20+ companies.",
+        "url": "https://kunalsabale89-dotcom.github.io/anagh-consultance/",
+        "telephone": "+919137426363",
+        "email": "kunalsabale89@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+        },
+        "openingHours": "Mo-Su 09:00-21:00",
+        "priceRange": "₹₹",
+        "sameAs": [
+            "https://wa.me/919137426363"
+        ],
+        "serviceType": [
+            "Health Insurance",
+            "Motor Insurance", 
+            "Life Insurance",
+            "Property Insurance",
+            "Travel Insurance"
+        ]
+    }
+    </script>
+
     <!-- ===== JAVASCRIPT ===== -->
     <script>
         // Mobile Menu Toggle
@@ -1060,9 +1109,23 @@
         
         // Console log for debugging
         console.log("Anagh Consultance Website Loaded Successfully!");
-        console.log("Tally Form ID: PdOQ2d");
-        console.log("Leads go to: kunalsabale89@gmail.com");
-        console.log("Contact: 9137426363");
+        console.log("Website: https://kunalsabale89-dotcom.github.io/anagh-consultance/");
+        console.log("Contact: 9137426363 | Email: kunalsabale89@gmail.com");
+        console.log("Tally Form: https://tally.so/embed/PdOQ2d");
+        
+        // Track form submissions
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'tally.formSubmitted') {
+                console.log("Form submitted successfully!");
+                // You can add Google Analytics event here
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submission', {
+                        'event_category': 'Lead',
+                        'event_label': 'Insurance Quote Form'
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>
